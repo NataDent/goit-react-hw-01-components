@@ -2,7 +2,7 @@ import { Profile } from "./Profile";
 import { Statistics } from './Statistics';
 import user from '../data/user.json';
 import data  from '../data/data.json';
-import transactions from '../data/transactions.json'
+// import transactions from '../data/transactions.json'
 
 
 export const App = () => {
