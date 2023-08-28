@@ -18,7 +18,6 @@ export const App = ({ username, tag, location, avatar, statusbar }) => {
       />
 
       <Statistics title="Upload stats" stats={data} />
-      <Statistics stats={data} />
     </div>
   );
 };
