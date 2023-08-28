@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+  followers,
+  views,
+  likes,
+}) => {
   return (
     <div className="profile">
       Profile
@@ -13,15 +21,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <ul className="stats">
         <li>
           <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span className="quantity">{followers}</span>
         </li>
         <li>
           <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span className="quantity">{views}</span>
         </li>
         <li>
           <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span className="quantity">{likes}</span>
         </li>
       </ul>
     </div>
