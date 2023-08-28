@@ -1,8 +1,9 @@
-import { Profile } from './Profile';
-// import { Statistics } from './Statistics';
 import user from '../data/user.json';
-// import data from '../data/data.json';
+import data from '../data/data.json';
 // import transactions from '../data/transactions.json'
+
+import { Profile } from './Profile';
+import { Statistics } from './Statistics';
 
 export const App = ({ username, tag, location, avatar, statusbar }) => {
   return (
@@ -16,8 +17,8 @@ export const App = ({ username, tag, location, avatar, statusbar }) => {
         stats={user.stats}
       />
 
-      {/* <Statistics title="Upload stats" stats={data} /> */}
-      {/* <Statistics stats={data} /> */}
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
     </div>
   );
 };
