@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import data from '../data/data.json';
 import { ListItem } from './ListItem';
 
 export const StatList = data => {
