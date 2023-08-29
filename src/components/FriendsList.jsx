@@ -2,13 +2,15 @@ import PropTypes from 'prop-types';
 import { Friend } from './Friend';
 
 export const FriendsList = ({ friends }) => {
-  <ul className="friend-list">
-    {friends.map(({ avatar, name, isOnline, id }) => {
-      return (
-        <Friend key={id} avatar={avatar} name={name} isOnline={isOnline} />
-      );
-    })}
-  </ul>;
+  return (
+    <ul className="friend-list">
+      {friends.map(({ avatar, name, isOnline, id }) => {
+        return (
+          <Friend key={id} avatar={avatar} name={name} isOnline={isOnline} />
+        );
+      })}
+    </ul>
+  );
 };
 
 FriendsList.propTypes = {
