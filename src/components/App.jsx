@@ -14,8 +14,10 @@ import { SideBarWrapper } from './SideBarWrapper/SideBarWrapper.styled';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
-  green: '#03ac13',
-  red: '#ff0800',
+  colors: {
+    green: '#03ac13',
+    red: '#ff0800',
+  },
 };
 
 const {

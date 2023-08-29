@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-const getBackgroundColor = ({ isOnline }) => {
-  if (isOnline) {
-    return 'green';
+const getBackgroundColor = props => {
+  console.log(props);
+  if (props.children) {
+    return props.theme.colors.green;
   } else {
-    return 'red';
+    return props.theme.colors.red;
   }
 };
 
