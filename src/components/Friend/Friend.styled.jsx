@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+const getBackgroundColor = ({ isOnline }) => {
+  if (isOnline) {
+    return 'green';
+  } else {
+    return 'red';
+  }
+};
+
 export const FriendItem = styled.li`
   display: flex;
   gap: 8px;
@@ -14,13 +22,7 @@ export const FriendStatus = styled.span`
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  background-color: ${({ isOnline }) => {
-    if (isOnline) {
-      return 'green';
-    } else {
-      return 'red';
-    }
-  }};
+  background-color: ${getBackgroundColor};
 `;
 
 export const FriendName = styled.p`

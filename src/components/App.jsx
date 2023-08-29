@@ -11,6 +11,13 @@ import { Layout } from './Layout/Layout.styled';
 import { Main } from './Main/Main.styled';
 import { SideBarWrapper } from './SideBarWrapper/SideBarWrapper.styled';
 
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  green: '#03ac13',
+  red: '#ff0800',
+};
+
 const {
   username,
   tag,
@@ -21,25 +28,27 @@ const {
 
 export const App = () => {
   return (
-    <Layout>
-      <SideBarWrapper>
-        <Profile
-          key={username}
-          username={username}
-          tag={tag}
-          location={location}
-          avatar={avatar}
-          followers={followers}
-          views={views}
-          likes={likes}
-        />
-        <Statistics title="Upload stats" stats={data} />
-        <FriendsList friends={friends} />
-      </SideBarWrapper>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <SideBarWrapper>
+          <Profile
+            key={username}
+            username={username}
+            tag={tag}
+            location={location}
+            avatar={avatar}
+            followers={followers}
+            views={views}
+            likes={likes}
+          />
+          <Statistics title="Upload stats" stats={data} />
+          <FriendsList friends={friends} />
+        </SideBarWrapper>
 
-      <Main>
-        <TransactionHistory transactions={transactions} />
-      </Main>
-    </Layout>
+        <Main>
+          <TransactionHistory transactions={transactions} />
+        </Main>
+      </Layout>
+    </ThemeProvider>
   );
 };
